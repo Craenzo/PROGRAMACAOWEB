@@ -1,0 +1,10 @@
+<% layout('layout') -%>
+<h2>Data (rota /data) — Método: <%= method %></h2>
+<% if (payload) { %>
+  <pre><%= payload %></pre>
+<% } else { %>
+  <form method="post" action="/data">
+    <label>teste: <input name="teste" /></label>
+    <button type="submit">Enviar</button>
+  </form>
+<% } %>
